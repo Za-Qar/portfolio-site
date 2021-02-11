@@ -11,7 +11,12 @@ import spheres from "../../imgs/spheres.jpg";
 // import ReactPlayer from "react-player";
 // import spheres from "../../imgs/spheres_banner_2.mp4";
 
-function Nav() {
+function Header() {
+  function scroll() {
+    let pageHeight = window.innerHeight;
+    window.scrollBy(0, 1000);
+  }
+
   return (
     <div className={cn(styles.banner)}>
       <div className={cn(styles.bannerText)}>
@@ -21,7 +26,9 @@ function Nav() {
           <br /> Portfolio
         </h3>
 
-        <button className={cn("button", styles.button)}>View projects</button>
+        <button className={cn("button", styles.button)} onClick={scroll}>
+          View projects
+        </button>
       </div>
 
       <img alt="banner" src={spheres} className={cn(styles.img)} />
@@ -43,4 +50,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Header;
