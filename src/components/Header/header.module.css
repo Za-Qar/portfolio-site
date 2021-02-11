@@ -1,0 +1,66 @@
+.banner {
+  position: relative;
+}
+
+.vid {
+  width: 100%;
+  transform: translateY(-15%);
+
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.bannerText {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 3rem;
+}
+
+.bannerText h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.bannerText h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.button {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1300px) {
+  .bannerText {
+    font-size: 2rem;
+  }
+  .button {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .bannerText {
+    font-size: 1.5rem;
+  }
+  .button {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .bannerText {
+    font-size: 1rem;
+  }
+  .button {
+    font-size: 0.55rem;
+  }
+}

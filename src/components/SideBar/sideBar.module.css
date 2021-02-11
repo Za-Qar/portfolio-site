@@ -1,0 +1,46 @@
+.main {
+  width: 3.5rem;
+  height: 100vh;
+  /* background-color: rgba(254, 217, 97, 0.5); */
+  background-color: rgba(69, 83, 110, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.burger {
+  display: block;
+  width: 1rem;
+  margin: 1.75rem auto 0;
+  cursor: pointer;
+}
+
+.socials img,
+.others img {
+  width: 1.75rem;
+  margin: 1.75rem auto 0;
+  cursor: pointer;
+  fill: white;
+}
+
+.socials {
+  width: 3.5rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.others {
+  width: 3.5rem;
+  text-align: center;
+  position: absolute;
+  bottom: 2.5rem;
+}
+
+/* --------------- responsive styling --------------- */
+@media screen and (max-width: 600px) {
+  .main {
+    display: none !important;
+  }
+}

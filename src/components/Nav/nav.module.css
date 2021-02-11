@@ -1,0 +1,128 @@
+.nav {
+  background-color: #1e202d;
+  width: 100%;
+  min-height: 5rem;
+}
+
+.navUl {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  height: 5rem;
+}
+
+.navUl .icon {
+  padding: 1rem;
+}
+
+.navUl li {
+  float: right;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  position: relative;
+}
+
+.navUl li span {
+  display: block;
+  padding: 1rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navUl li span:hover {
+  color: #fed961;
+}
+
+.navUl li span:active {
+  color: #fed961;
+}
+
+.active {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.active:hover {
+  background-image: url("../../imgs/active.svg");
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+}
+
+.active:active {
+  background-image: url("../../imgs/active.svg");
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+}
+
+/* ------------- user image styling --------------- */
+.mobBehance {
+  background-image: url("../../imgs/behance.svg");
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  display: none;
+}
+.mobGithub {
+  background-image: url("../../imgs/github.svg");
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  display: none;
+}
+.mobLinkedIn {
+  background-image: url("../../imgs/linkedin.svg");
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  display: none;
+}
+.mobBehance:hover,
+.mobGithub:hover {
+  fill: #fed961;
+}
+
+/* ------------- user image styling --------------- */
+.logo {
+  width: 3rem;
+  margin-top: 1.5rem;
+}
+
+/* --------------- burger responsive styling --------------- */
+@media screen and (max-width: 600px) {
+  .web {
+    display: none !important;
+  }
+
+  .mobBehance,
+  .mobGithub,
+  .mobLinkedIn {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .mobGithub,
+  .mobLinkedIn {
+    margin-right: 1.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}

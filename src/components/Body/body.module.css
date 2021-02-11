@@ -1,0 +1,132 @@
+.body {
+  /* background-color: #42506b; */
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sec h3 {
+  margin: 0;
+  padding: 0;
+  color: #fed961;
+  font-size: 1.5rem;
+}
+
+.sec h4 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: white;
+  font-weight: 300;
+  border-bottom: 1px solid #fed961;
+}
+
+.sec p {
+  color: white;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #fed961;
+}
+
+.sec {
+  margin: 1rem 0 1rem 0;
+}
+
+@media (min-width: 1300px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .sec {
+    grid-column: span 3;
+    padding: 2rem;
+    position: relative;
+  }
+}
+
+@media (max-width: 1300px) {
+  .sec {
+    margin: 4rem 0 4rem 0;
+  }
+}
+
+.button {
+  width: 30%;
+}
+
+.buttonRight {
+  position: absolute;
+  right: 0;
+  margin-right: 2rem;
+}
+
+/* -------- Golden Spheres -------- */
+
+.goldenSphere img {
+  width: 3rem;
+  animation: goldenSphere 7s linear infinite;
+}
+
+.goldenSphere {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes goldenSphere {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+.goldenSphere img:nth-child(1) {
+  animation-delay: 1s;
+  opacity: 0;
+}
+.goldenSphere img:nth-child(7) {
+  animation-delay: 3s;
+  opacity: 0;
+}
+.goldenSphere img:nth-child(3) {
+  animation-delay: 7s;
+  opacity: 0;
+}
+.goldenSphere img:nth-child(6) {
+  animation-delay: 19.5s;
+  opacity: 0;
+}
+.goldenSphere img:nth-child(5) {
+  animation-delay: 5s;
+  opacity: 0;
+}
+.goldenSphere img:nth-child(4) {
+  animation-delay: 37s;
+  opacity: 0;
+}
+.goldenSphere img:nth-child(2) {
+  animation-delay: 54s;
+  opacity: 0;
+}
