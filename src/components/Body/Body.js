@@ -27,7 +27,7 @@ function Nav() {
       <div className={cn(`container`)}>
         <div className={cn(styles.grid)}>
           <div className={cn(styles.sec)}>
-            <h3>Sociely</h3>
+            <h3>SoCietly</h3>
             <h4>A post bootcamp social platform</h4>
             <img className={cn(styles.image)} src={societly} alt="societly" />
             <p>
@@ -37,7 +37,7 @@ function Nav() {
               organisation, while allowing coaches to gauge the wider impact of
               the course. We utilised tools such as Jira to plan and work in
               short sprints, as well as Balsamiq and Adobe XD, to build
-              wireframe and hi- fidelity designs. I focused primarily on
+              wireframe and hi-fidelity designs. I focused primarily on
               front-end implementation using React, as well as the front-end
               design and user experience. We implemented external modules
               including Nodemailer to integrate event reminders and updates, and
@@ -76,7 +76,7 @@ function Nav() {
             <p>
               During a two day hackathon, my teammate and I started planning
               thinking of an interesting and fun game to play. We came up with
-              the concept of Shooty Mc Bear Face and begun. We first made a
+              the concept of Shooty Mc Beard Face and begun. We first made a
               detailed plan of what classes we will have, what states they will
               contain and what their behaviours will be. We then started coding
               and iterating over the plan in an agile fashion. We faced some
@@ -172,12 +172,12 @@ function Nav() {
             <h4>A fun and replayable quiz game</h4>
             <img className={cn(styles.image)} src={quiz} alt="quiz game" />
             <p>
-              We used opentdb's trivia api and recieved 3 incorrecr answers in
+              We used opentdb's trivia api and received 3 incorrect answers in
               one array and 1 correct in another from the api. We then took to
               placing them in one array and assigning them to li tags so users
               can interact with them but also wrote a function which shuffles
               location of the correct/incorrect answers as to make them appear
-              in a differnt choice option everytime. The game also informs the
+              in a different choice option every time. The game also informs the
               player of the correct/incorrect answer when they make their
               choice. It's a fun and competitive game that was done with a heart
               full of passion and little time.
