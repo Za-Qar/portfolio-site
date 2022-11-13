@@ -273,11 +273,6 @@ function Nav() {
               allows people to carry their todos from the web app above on their
               phone as an app if they please
             </p>
-            <a href="#" target="_blank" rel="noreferrer">
-              <button className={cn("button", styles.button)}>
-                View project code
-              </button>
-            </a>
           </div>
 
           <div className={cn(styles.sec)}>
@@ -346,26 +341,6 @@ function Nav() {
               a London based start-up named Hedge Eagle that specialises in
               hedge funding and investment
             </p>
-            <a
-              href="https://societly.netlify.app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className={cn("button", styles.button)}>
-                View project
-              </button>
-            </a>
-            <a
-              href="https://github.com/Za-Qar/SoCietly-backend"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button
-                className={cn("button", styles.button, styles.buttonRight)}
-              >
-                View backend
-              </button>
-            </a>
           </div>
 
           <div className={cn(styles.sec)}>
