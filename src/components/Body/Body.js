@@ -160,11 +160,6 @@ function Nav() {
               especially when saving passwords. Many other features are
               highlighted on the website.
             </p>
-            <a href="https://www.planaura.com" target="_blank" rel="noreferrer">
-              <button className={cn("button", styles.button)}>
-                View project
-              </button>
-            </a>
           </div>
 
           <div className={cn(styles.sec)}>
@@ -288,15 +283,6 @@ function Nav() {
               whoever has the link. This was an exercise to look at some foreign
               code then debug it to make sure everything was working as intended
             </p>
-            <a
-              href="https://chat-app-zaid.herokuapp.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className={cn("button", styles.button)}>
-                View project
-              </button>
-            </a>
           </div>
 
           <div className={cn(styles.sec)}>
@@ -357,15 +343,6 @@ function Nav() {
               every day then up vote and give their not so useful opinions in
               the comment section
             </p>
-            <a
-              href="https://meme-site-zaid.netlify.app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className={cn("button", styles.button)}>
-                View project
-              </button>
-            </a>
           </div>
         </div>
       </div>
