@@ -18,16 +18,6 @@ function Nav() {
           </a>
           <li className={cn(styles.web)}>
             <a
-              href="https://www.behance.net/zaidqarout"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Design Portfolio</span>
-              <div className={cn(styles.active)}></div>
-            </a>
-          </li>
-          <li className={cn(styles.web)}>
-            <a
               href="https://github.com/za-qar"
               target="_blank"
               rel="noreferrer"
