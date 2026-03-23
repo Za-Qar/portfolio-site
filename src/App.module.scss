@@ -1,0 +1,10 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: clip;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+}

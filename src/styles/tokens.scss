@@ -1,0 +1,24 @@
+$bp-desktop: 1200px;
+$bp-tablet: 900px;
+$bp-mobile: 640px;
+
+:root {
+  --color-ink: #f2f5f8;
+  --color-muted: #c8d5e4;
+  --color-brand: #ffd36a;
+  --color-brand-deep: #d39f1f;
+  --color-panel: rgba(20, 28, 44, 0.82);
+  --color-panel-strong: rgba(15, 22, 36, 0.92);
+  --shadow-panel: 0 20px 45px rgba(2, 8, 18, 0.45);
+}
+
+@mixin container {
+  width: min(1120px, 88vw);
+  margin-inline: auto;
+}
+
+@mixin down($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

@@ -1,0 +1,47 @@
+@use "../../styles/tokens" as *;
+
+.header {
+  position: relative;
+  isolation: isolate;
+  padding: 4.75rem 0 4.1rem;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  width: min(830px, 100%);
+}
+
+.kicker {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-brand) 76%, white 24%);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.inner h1 {
+  margin-top: 0.5rem;
+  font-size: clamp(2rem, 4.6vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.inner h2 {
+  margin-top: 1rem;
+  color: #ecf1f9;
+  font-size: clamp(1.1rem, 2.2vw, 1.56rem);
+  line-height: 1.35;
+  max-width: 24ch;
+}
+
+.intro {
+  margin: 1.15rem 0 1.65rem;
+  line-height: 1.75;
+  max-width: 62ch;
+}
+
+@include down($bp-tablet) {
+  .header {
+    padding-top: 3.7rem;
+  }
+}

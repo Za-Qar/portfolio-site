@@ -1,0 +1,166 @@
+@use "../../styles/tokens" as *;
+
+.projects {
+  position: relative;
+  padding: 0 0 5.5rem;
+}
+
+.headline {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.8rem;
+}
+
+.headline p {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: color-mix(in srgb, var(--color-brand) 72%, white 28%);
+  font-weight: 700;
+}
+
+.headline h2 {
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+}
+
+.headline span {
+  width: min(190px, 40vw);
+  height: 1px;
+  background: linear-gradient(to right, var(--color-brand), transparent);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.card {
+  display: grid;
+  grid-column: span 6;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.15rem;
+  background: linear-gradient(
+    140deg,
+    rgba(19, 27, 43, 0.87) 0%,
+    rgba(11, 18, 30, 0.93) 100%
+  );
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+  opacity: 0;
+  animation: cardReveal 560ms ease forwards;
+}
+
+.card:nth-child(2n) {
+  animation-delay: 120ms;
+}
+
+.imageWrap {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.005);
+  transition: transform 250ms ease;
+}
+
+.card:hover .imageWrap img {
+  transform: scale(1.03);
+}
+
+.content {
+  padding: 1.1rem 1.1rem 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.header h3 {
+  font-size: 1.1rem;
+}
+
+.header time {
+  color: color-mix(in srgb, var(--color-brand) 70%, white 30%);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.content h4 {
+  font-size: 0.98rem;
+  color: #f7d98a;
+}
+
+.content p {
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags li {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.74rem;
+  color: #dce8f5;
+}
+
+.techStack {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.techStack span {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-brand) 68%, white 32%);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+@include down($bp-desktop) {
+  .card {
+    grid-column: span 12;
+  }
+}
+
+@include down($bp-mobile) {
+  .content {
+    padding: 1rem;
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

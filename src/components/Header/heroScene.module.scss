@@ -1,0 +1,57 @@
+.canvasWrap,
+.fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.canvasWrap {
+  opacity: 0.92;
+}
+
+.fallback {
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0.4px);
+  animation: rise 7.2s ease-in-out infinite alternate;
+}
+
+.bubbleA {
+  width: min(18vw, 190px);
+  aspect-ratio: 1;
+  right: 9%;
+  top: 15%;
+  background: radial-gradient(circle at 30% 30%, #ffd86b, #d29718 68%, #997000);
+}
+
+.bubbleB {
+  width: min(12vw, 130px);
+  aspect-ratio: 1;
+  right: 22%;
+  top: 45%;
+  background: radial-gradient(circle at 35% 35%, #95d8ff, #4da6de 65%, #174f72);
+  animation-delay: 0.35s;
+}
+
+.bubbleC {
+  width: min(14vw, 150px);
+  aspect-ratio: 1;
+  right: 2%;
+  top: 58%;
+  background: radial-gradient(circle at 40% 40%, #ffefb8, #f3b942 70%, #cb8a09);
+  animation-delay: 0.7s;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(-14px);
+  }
+}
