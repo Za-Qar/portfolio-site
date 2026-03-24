@@ -23,6 +23,7 @@ export const projects: Project[] = [
     techStack: ["React", "Node.js", "Google Maps API", "Nodemailer"],
     year: 2022,
     featured: true,
+    status: "live",
     image: societly,
     demoUrl: "https://societly.netlify.app",
     repoUrl: "https://github.com/Za-Qar/SoCietly-backend"
@@ -37,6 +38,7 @@ export const projects: Project[] = [
     techStack: ["JavaScript", "Canvas", "OOP"],
     year: 2021,
     featured: true,
+    status: "live",
     image: shooty,
     demoUrl: "https://shooty-mc-beard-face.netlify.app"
   },
@@ -50,6 +52,7 @@ export const projects: Project[] = [
     techStack: ["React", "Node.js", "CryptoJS"],
     year: 2022,
     featured: true,
+    status: "live",
     image: notes,
     demoUrl: "https://todos-counter-notes.netlify.app",
     repoUrl: "https://github.com/Za-Qar/todos_counters_notes-backend"
@@ -64,7 +67,9 @@ export const projects: Project[] = [
     techStack: ["Product Design", "Branding", "Web"],
     year: 2023,
     featured: false,
-    image: planaura
+    status: "in-progress",
+    image: planaura,
+    availabilityNote: "Concept project with no public host yet."
   },
   {
     id: "trivia-quizer",
@@ -76,6 +81,7 @@ export const projects: Project[] = [
     techStack: ["JavaScript", "API Integration"],
     year: 2021,
     featured: false,
+    status: "live",
     image: quiz,
     demoUrl: "https://trivia-quiz-game.netlify.app"
   },
@@ -89,6 +95,7 @@ export const projects: Project[] = [
     techStack: ["HTML", "CSS", "Brand Design"],
     year: 2020,
     featured: false,
+    status: "live",
     image: rm,
     demoUrl: "https://rain-makers.org"
   },
@@ -102,6 +109,7 @@ export const projects: Project[] = [
     techStack: ["React", "Node.js", "Form UX"],
     year: 2022,
     featured: false,
+    status: "live",
     image: ment,
     demoUrl: "https://mentor-matcher.netlify.app",
     repoUrl: "https://github.com/Za-Qar/mentor_matcher-backend"
@@ -116,7 +124,9 @@ export const projects: Project[] = [
     techStack: ["React Native"],
     year: 2022,
     featured: false,
-    image: todoApp
+    status: "in-progress",
+    image: todoApp,
+    availabilityNote: "Mobile build exists but is not publicly hosted yet."
   },
   {
     id: "chattie",
@@ -128,7 +138,9 @@ export const projects: Project[] = [
     techStack: ["WebSockets", "JavaScript"],
     year: 2021,
     featured: false,
-    image: chattie
+    status: "in-progress",
+    image: chattie,
+    availabilityNote: "Debug exercise project; public demo currently unavailable."
   },
   {
     id: "drang-strenge-muse",
@@ -140,6 +152,7 @@ export const projects: Project[] = [
     techStack: ["HTML", "CSS", "Content Strategy"],
     year: 2019,
     featured: false,
+    status: "live",
     image: drang,
     demoUrl: "https://exhibition-drang-strenge-muse.netlify.app/"
   },
@@ -153,7 +166,9 @@ export const projects: Project[] = [
     techStack: ["WordPress", "UI Design"],
     year: 2020,
     featured: false,
-    image: hedge
+    status: "private",
+    image: hedge,
+    availabilityNote: "Client project, link is private."
   },
   {
     id: "meme-website",
@@ -165,6 +180,8 @@ export const projects: Project[] = [
     techStack: ["JavaScript", "Reddit API"],
     year: 2021,
     featured: false,
-    image: meme
+    status: "in-progress",
+    image: meme,
+    availabilityNote: "Legacy prototype that is not currently deployed."
   }
 ];
