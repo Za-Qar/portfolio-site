@@ -7,7 +7,6 @@
 
 .button {
   color: white;
-  background-color: none;
   background: transparent;
   outline: none;
   border: 2px solid #fed961;
@@ -15,28 +14,24 @@
   padding: 1.2rem;
   cursor: pointer;
   margin-top: 0.5rem;
+
+  &:hover {
+    background-color: #b49632;
+  }
 }
 
-.button:hover {
-  background-color: #b49632;
-}
-
-/*---Scroll bar---*/
+/* --- Scrollbar --- */
 ::-webkit-scrollbar {
   width: 0.7rem;
-}
-
-::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 5px grey; */
 }
 
 ::-webkit-scrollbar-thumb {
   background: #fed961;
   border-radius: 50px;
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background: #ffc400;
+  &:hover {
+    background: #ffc400;
+  }
 }
 
 @media (max-width: 1300px) {
