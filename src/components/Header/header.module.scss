@@ -6,6 +6,21 @@
   padding: 4.75rem 0 4.1rem;
 }
 
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, rgba(9, 15, 26, 0.76) 0%, rgba(8, 14, 24, 0.82) 100%),
+    url("../../imgs/occupancy-mapping-02.png");
+  background-size: auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.22;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .inner {
   position: relative;
   z-index: 2;

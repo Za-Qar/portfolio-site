@@ -18,9 +18,14 @@ body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--color-ink);
   background:
+    linear-gradient(160deg, rgba(7, 12, 20, 0.78) 0%, rgba(8, 13, 24, 0.84) 100%),
     radial-gradient(circle at 12% 8%, rgba(255, 195, 70, 0.22), transparent 28%),
     radial-gradient(circle at 92% 18%, rgba(106, 189, 255, 0.18), transparent 30%),
-    linear-gradient(160deg, #10192b 0%, #17253b 45%, #0d1726 100%);
+    linear-gradient(160deg, #10192b 0%, #17253b 45%, #0d1726 100%),
+    url("../imgs/forest-navigation-bg.png");
+  background-size: auto, auto, auto, auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: url("../imgs/active.svg") 4 12, auto;

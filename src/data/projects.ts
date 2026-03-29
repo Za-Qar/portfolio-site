@@ -11,8 +11,175 @@ import chattie from "../imgs/chattie.jpg";
 import drang from "../imgs/drang.jpg";
 import hedge from "../imgs/hedge.jpg";
 import meme from "../imgs/meme.jpg";
+import spheres from "../imgs/spheres.jpg";
+import forestNavigationBg from "../imgs/forest-navigation-bg.png";
+import kukaTeleopImage from "../imgs/kuka-teleop-01.png";
+import occupancyMappingImage from "../imgs/occupancy-mapping-05.png";
+import nlpToxicCover from "../imgs/nlp-toxic-cover.png";
+import wikiqaCover from "../imgs/wikiqa-cover.png";
+import gaWordCover from "../imgs/ga-word-cover.png";
+import prologTriageCover from "../imgs/prolog-triage-cover.png";
 
 export const projects: Project[] = [
+  {
+    id: "behavior-based-occupancy-mapping",
+    title: "Behavior-Based Occupancy Mapping",
+    summary: "Autonomous occupancy-grid mapping in simulation",
+    description:
+      "MSc robotics project using MATLAB and CoppeliaSim to compare manual vs autonomous exploration with real-time occupancy-grid updates and performance metrics.",
+    tags: ["MSc", "Robotics", "AI"],
+    techStack: ["MATLAB", "CoppeliaSim", "Lua", "ZeroMQ"],
+    year: 2026,
+    featured: true,
+    status: "in-progress",
+    image: occupancyMappingImage,
+    repoUrl: "https://github.com/Za-Qar/behavior-based-occupancy-mapping",
+    caseStudyUrl:
+      "https://github.com/Za-Qar/behavior-based-occupancy-mapping#visual-walkthrough",
+    availabilityNote: "Simulation project with visuals and run details in the repository README."
+  },
+  {
+    id: "wikiqa-seq2seq-chatbot-multi-models",
+    title: "WikiQA Seq2Seq Chatbot",
+    summary: "Multi-model generative QA chatbot comparison",
+    description:
+      "MSc NLP project comparing Seq2Seq architectures with and without attention, plus a Streamlit interface for side-by-side model interaction.",
+    tags: ["MSc", "NLP", "Deep Learning"],
+    techStack: ["Python", "PyTorch", "Seq2Seq", "Streamlit"],
+    year: 2026,
+    featured: true,
+    status: "in-progress",
+    image: wikiqaCover,
+    repoUrl: "https://github.com/Za-Qar/wikiqa-seq2seq-chatbot-multi-models",
+    caseStudyUrl: "https://github.com/Za-Qar/wikiqa-seq2seq-chatbot-multi-models#visual-evidence",
+    availabilityNote: "Interactive demo is available locally via Streamlit from the repository."
+  },
+  {
+    id: "agent-system-forest-navigation",
+    title: "Agent System Forest Navigation",
+    summary: "Multi-agent forest navigation and decision logic",
+    description:
+      "MSc AI agent-system project using AgentSpeak/Jason with environment logic for autonomous navigation behaviour in a forest scenario.",
+    tags: ["MSc", "Agents", "AI"],
+    techStack: ["AgentSpeak", "Jason", "Java", "Gradle"],
+    year: 2026,
+    featured: true,
+    status: "in-progress",
+    image: forestNavigationBg,
+    repoUrl: "https://github.com/Za-Qar/agent-system-forest-navigation",
+    availabilityNote: "Repository is newly published; README and demo assets are in progress."
+  },
+  {
+    id: "ml-london-traffic-emissions",
+    title: "London Traffic Emissions ML",
+    summary: "Regression models for urban emissions prediction",
+    description:
+      "MSc project modelling CO2, NOx, PM10, and PM2.5 from LAEI traffic data, comparing Decision Trees, Random Forest, XGBoost, and Ridge.",
+    tags: ["MSc", "Machine Learning", "Data Science"],
+    techStack: ["Python", "Jupyter Notebook", "scikit-learn", "XGBoost"],
+    year: 2026,
+    featured: true,
+    status: "in-progress",
+    image: spheres,
+    repoUrl: "https://github.com/Za-Qar/machine-learning-london-traffic-emissions",
+    availabilityNote: "Notebook project. Public report/demo page will be added next."
+  },
+  {
+    id: "angular-task-board",
+    title: "Angular Task Board",
+    summary: "Task management app with NgRx and Signals",
+    description:
+      "Built with modern Angular patterns, including NgRx state, selectors, effects, Signals integration, and dynamic component rendering.",
+    tags: ["MSc", "Frontend", "Architecture"],
+    techStack: ["Angular", "TypeScript", "NgRx", "RxJS"],
+    year: 2026,
+    featured: true,
+    status: "in-progress",
+    image: spheres,
+    repoUrl: "https://github.com/Za-Qar/angular-task-board",
+    availabilityNote: "Repo is public. GitHub Pages deployment setup is planned."
+  },
+  {
+    id: "nlp-toxic-comment-classification",
+    title: "Toxic Comment Classification",
+    summary: "Text classification experiments for moderation use-cases",
+    description:
+      "MSc NLP classification project comparing TF-IDF and embedding pipelines across multiple models, with Kaggle submission benchmarking.",
+    tags: ["MSc", "NLP", "Machine Learning"],
+    techStack: ["Python", "Jupyter Notebook", "spaCy", "scikit-learn"],
+    year: 2026,
+    featured: true,
+    status: "in-progress",
+    image: nlpToxicCover,
+    repoUrl: "https://github.com/Za-Qar/natural-language-processing-toxic-comment-classification",
+    caseStudyUrl:
+      "https://github.com/Za-Qar/natural-language-processing-toxic-comment-classification#visuals",
+    availabilityNote: "Notebook project with model-comparison visuals and Kaggle benchmark results."
+  },
+  {
+    id: "genetic-algorithm-word-game-solver",
+    title: "Genetic Algorithm WORD Solver",
+    summary: "Heuristic puzzle solver with interactive GUI",
+    description:
+      "Intelligent systems project implementing a genetic algorithm for a 4x4 WORD puzzle, with fitness tracking and a Tkinter interface.",
+    tags: ["AI", "Search", "Algorithms"],
+    techStack: ["Python", "Genetic Algorithm", "Tkinter", "Matplotlib"],
+    year: 2026,
+    featured: false,
+    status: "in-progress",
+    image: gaWordCover,
+    repoUrl: "https://github.com/Za-Qar/genetic-algorithm-WORD-game-solver",
+    caseStudyUrl: "https://github.com/Za-Qar/genetic-algorithm-WORD-game-solver#visuals",
+    availabilityNote: "Desktop app project; run locally from the repository."
+  },
+  {
+    id: "prolog-triage-expert-system",
+    title: "Prolog Triage Expert System",
+    summary: "Rule-based diagnostic reasoning prototype",
+    description:
+      "A SWI-Prolog expert system that asks symptom/risk questions and provides explainable triage outcomes using symbolic inference rules.",
+    tags: ["AI", "Reasoning", "Expert Systems"],
+    techStack: ["Prolog", "Knowledge Base", "Rule Engine"],
+    year: 2026,
+    featured: false,
+    status: "in-progress",
+    image: prologTriageCover,
+    repoUrl: "https://github.com/Za-Qar/prolog-triage-expert-system",
+    caseStudyUrl: "https://github.com/Za-Qar/prolog-triage-expert-system#visuals-extracted-from-report",
+    availabilityNote: "CLI expert-system project; run in SWI-Prolog from the repository."
+  },
+  {
+    id: "kuka-youbot-teleoperating",
+    title: "KUKA youBot Teleoperation",
+    summary: "Remote robot teleoperation in simulation",
+    description:
+      "MATLAB App Designer controls for a KUKA youBot in CoppeliaSim, including base movement, arm-joint control, and RGB camera capture.",
+    tags: ["Robotics", "Simulation", "MSc"],
+    techStack: ["MATLAB", "CoppeliaSim", "Remote API"],
+    year: 2026,
+    featured: false,
+    status: "in-progress",
+    image: kukaTeleopImage,
+    repoUrl: "https://github.com/Za-Qar/kuka-youbot-teleoperation-matlab-coppeliasim",
+    caseStudyUrl:
+      "https://github.com/Za-Qar/kuka-youbot-teleoperation-matlab-coppeliasim#demo-media",
+    availabilityNote: "Simulation-based project; see repo demo media for screenshots and video."
+  },
+  {
+    id: "football-organiser-server",
+    title: "Football Organiser Server",
+    summary: "Backend API for organising football events",
+    description:
+      "Java backend service for managing football sessions, team coordination, and organiser workflows with structured REST endpoints.",
+    tags: ["Backend", "API"],
+    techStack: ["Java", "Spring Boot", "Maven"],
+    year: 2023,
+    featured: false,
+    status: "in-progress",
+    image: spheres,
+    repoUrl: "https://github.com/Za-Qar/football-organiser-server",
+    availabilityNote: "Backend service repository without a hosted frontend demo."
+  },
   {
     id: "societly",
     title: "SoCietly",
