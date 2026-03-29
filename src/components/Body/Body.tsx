@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { projects } from "../../data/projects";
-import type { Project, ProjectStatus } from "../../types/project";
+import { ProjectStatus, type Project, type ProjectTechStack } from "../../types/project";
 import styles from "./body.module.scss";
 
 const orderedProjects = [...projects].sort((left, right) => {
@@ -11,17 +11,18 @@ const orderedProjects = [...projects].sort((left, right) => {
 });
 
 const statusLabelByType: Record<ProjectStatus, string> = {
-  live: "Live",
-  "in-progress": "In Progress",
-  private: "Private"
+  [ProjectStatus.Live]: "Live",
+  [ProjectStatus.InProgress]: "In Progress",
+  [ProjectStatus.Private]: "Private"
 };
 
 type StatusFilter = ProjectStatus | "all";
+type StackFilter = ProjectTechStack | "all";
 
 function ProjectActions({ project }: { project: Project }) {
   const unavailableMessage =
     project.availabilityNote ??
-    (project.status === "private" ? "Private project." : "Not hosted yet.");
+    (project.status === ProjectStatus.Private ? "Private project." : "Not hosted yet.");
 
   return (
     <div className={styles.actions}>
@@ -57,7 +58,7 @@ function ProjectActions({ project }: { project: Project }) {
 function Body() {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
-  const [stackFilter, setStackFilter] = useState("all");
+  const [stackFilter, setStackFilter] = useState<StackFilter>("all");
 
   const stackOptions = useMemo(() => {
     return [...new Set(projects.flatMap((project) => project.techStack))].sort((left, right) =>
@@ -92,9 +93,9 @@ function Body() {
   }, [searchTerm, stackFilter, statusFilter]);
 
   const statusClassByType: Record<ProjectStatus, string> = {
-    live: styles.statusLive,
-    "in-progress": styles.statusInProgress,
-    private: styles.statusPrivate
+    [ProjectStatus.Live]: styles.statusLive,
+    [ProjectStatus.InProgress]: styles.statusInProgress,
+    [ProjectStatus.Private]: styles.statusPrivate
   };
 
   const hasFilters = searchTerm.trim() !== "" || statusFilter !== "all" || stackFilter !== "all";
@@ -132,15 +133,18 @@ function Body() {
               onChange={(event) => setStatusFilter(event.target.value as StatusFilter)}
             >
               <option value="all">All statuses</option>
-              <option value="live">Live</option>
-              <option value="in-progress">In Progress</option>
-              <option value="private">Private</option>
+              <option value={ProjectStatus.Live}>Live</option>
+              <option value={ProjectStatus.InProgress}>In Progress</option>
+              <option value={ProjectStatus.Private}>Private</option>
             </select>
           </label>
 
           <label className={styles.controlField}>
             <span>Stack</span>
-            <select value={stackFilter} onChange={(event) => setStackFilter(event.target.value)}>
+            <select
+              value={stackFilter}
+              onChange={(event) => setStackFilter(event.target.value as StackFilter)}
+            >
               <option value="all">All stacks</option>
               {stackOptions.map((stackItem) => (
                 <option key={stackItem} value={stackItem}>
