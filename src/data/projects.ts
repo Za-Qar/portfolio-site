@@ -6,7 +6,6 @@ import {
 } from "../types/project";
 import societly from "../imgs/societly.jpg";
 import shooty from "../imgs/shooty.jpg";
-import notes from "../imgs/notes.jpg";
 import planaura from "../imgs/planaura.jpg";
 import quiz from "../imgs/quiz.jpg";
 import rm from "../imgs/rm.jpg";
@@ -16,14 +15,16 @@ import chattie from "../imgs/chattie.jpg";
 import drang from "../imgs/drang.jpg";
 import hedge from "../imgs/hedge.jpg";
 import meme from "../imgs/meme.jpg";
-import spheres from "../imgs/spheres.jpg";
+import spheres from "../imgs/spheres-optimised.jpg";
 import forestNavigationBg from "../imgs/forest-navigation-bg.png";
-import kukaTeleopImage from "../imgs/kuka-teleop-01.png";
-import occupancyMappingImage from "../imgs/occupancy-mapping-05.png";
+import kukaTeleopImage from "../imgs/kuka-teleop-01-optimised.jpg";
+import occupancyMappingImage from "../imgs/occupancy-mapping-05-optimised.jpg";
 import nlpToxicCover from "../imgs/nlp-toxic-cover.png";
-import wikiqaCover from "../imgs/wikiqa-cover.png";
+import wikiqaCover from "../imgs/wikiqa-cover-optimised.jpg";
 import gaWordCover from "../imgs/ga-word-cover.png";
-import prologTriageCover from "../imgs/prolog-triage-cover.png";
+import prologTriageCover from "../imgs/prolog-triage-cover-optimised.jpg";
+import todoCountersNotes from "../imgs/todo-counters-notes-app-optimised.jpg";
+import taskBoardApp from "../imgs/task-board-app-optimised.jpg";
 
 const tag = ProjectTag;
 const stack = ProjectTechStack;
@@ -99,14 +100,14 @@ export const projects: Project[] = [
     summary: "Task management app with NgRx and Signals",
     description:
       "Built with modern Angular patterns, including NgRx state, selectors, effects, Signals integration, and dynamic component rendering.",
-    tags: [tag.MSc, tag.Frontend, tag.Architecture],
+    tags: [tag.Frontend, tag.Architecture],
     techStack: [stack.Angular, stack.TypeScript, stack.NgRx, stack.RxJS],
     year: 2026,
     featured: true,
     status: status.InProgress,
-    image: spheres,
+    image: taskBoardApp,
     repoUrl: "https://github.com/Za-Qar/angular-task-board",
-    availabilityNote: "Repo is public. GitHub Pages deployment setup is planned."
+    availabilityNote: "Latest project. Repo is public."
   },
   {
     id: "nlp-toxic-comment-classification",
@@ -229,7 +230,7 @@ export const projects: Project[] = [
     year: 2022,
     featured: true,
     status: status.Live,
-    image: notes,
+    image: todoCountersNotes,
     demoUrl: "https://todos-counter-notes.netlify.app",
     repoUrl: "https://github.com/Za-Qar/todos_counters_notes-backend"
   },

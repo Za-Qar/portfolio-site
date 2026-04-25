@@ -18,6 +18,7 @@ function Header() {
           This portfolio focuses on real shipped work, strong fundamentals, and rapid
           iteration across frontend, backend, and product collaboration.
         </p>
+        <p className={styles.stackNote}>Built with React 19, TypeScript, and Vite.</p>
         <button className="primaryButton" type="button" onClick={scrollToProjects}>
           View Projects
         </button>

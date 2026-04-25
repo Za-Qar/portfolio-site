@@ -3,7 +3,41 @@ import { projects } from "../../data/projects";
 import { ProjectStatus, type Project, type ProjectTechStack } from "../../types/project";
 import styles from "./body.module.scss";
 
+const curatedProjectOrder: string[] = [
+  "angular-task-board",
+  "football-organiser-server",
+  "societly",
+  "mentor-mentee-matcher",
+  "behavior-based-occupancy-mapping",
+  "todos-counters-notes",
+  "wikiqa-seq2seq-chatbot-multi-models",
+  "shooty",
+  "nlp-toxic-comment-classification",
+  "trivia-quizer",
+  "agent-system-forest-navigation",
+  "rainmakers",
+  "ml-london-traffic-emissions",
+  "prolog-triage-expert-system",
+  "genetic-algorithm-word-game-solver",
+  "drang-strenge-muse",
+  "planaura",
+  "todo-react-native",
+  "chattie",
+  "kuka-youbot-teleoperating",
+  "hedge-eagle",
+  "meme-website"
+];
+
+const orderById = new Map(curatedProjectOrder.map((id, index) => [id, index]));
+
 const orderedProjects = [...projects].sort((left, right) => {
+  const leftOrder = orderById.get(left.id) ?? Number.MAX_SAFE_INTEGER;
+  const rightOrder = orderById.get(right.id) ?? Number.MAX_SAFE_INTEGER;
+
+  if (leftOrder !== rightOrder) {
+    return leftOrder - rightOrder;
+  }
+
   if (left.featured === right.featured) {
     return right.year - left.year;
   }
@@ -177,7 +211,13 @@ function Body() {
             {filteredProjects.map((project) => (
               <article key={project.id} className={styles.card}>
                 <div className={styles.imageWrap}>
-                  <img src={project.image} alt={`${project.title} screenshot`} loading="lazy" />
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(max-width: 1200px) 100vw, 50vw"
+                  />
                 </div>
 
                 <div className={styles.content}>
